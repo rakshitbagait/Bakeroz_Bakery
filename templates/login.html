@@ -5,6 +5,10 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bakeroz</title>
@@ -23,7 +27,7 @@
       }
       .login {
         border-radius: 10px;
-        background-color: transparent;
+        background-color:  rgba(0, 0, 0, 0.3);
         height: auto;
         width: auto;
         padding: 30px 30px;
@@ -33,7 +37,7 @@
         border: 3px solid #ffbb38;
         text-align: center;
         align-items: center;
-        box-shadow: 0, 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 15px rgba(255, 187, 56, 0.4);
         letter-spacing: 1px;
         font-family: "Roboto";
         color: white;
@@ -109,6 +113,7 @@
         width: 100%;
         margin-top: 0px;
         border: 10px;
+        border-radius: 5px;
       }
       .login input::placeholder {
         color: white;
@@ -116,9 +121,10 @@
     </style>
   </head>
   <body>
+    <form action="">
     <div class="login">
       <img
-        src="{{url_for ('static',filename ='BAKEROZ.png')}}"
+        src="{{url_for('static', filename ='BAKEROZ.png')}}"
         alt="logo"
         class="bg"
       />
@@ -139,7 +145,7 @@
       />
       <p><a href="#">Forget Password?</a></p>
       <button>Login</button>
-      <p>Don't have an account? <a href="#">sign up</a></p>
-    </div>
+      <p>Don't have an account? <a href="{{url_for('signup')}}">sign up</a></p>
+    </div></form>
   </body>
 </html>
