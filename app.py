@@ -24,7 +24,9 @@ def login():
 @app.route("/signup")
 def signup():
     return render_template("signup.html")
-
+@app.route("/verify")
+def verify():
+    return render_template("verify.html")
 if __name__ == "__main__":
     app.run(debug = True)
     
