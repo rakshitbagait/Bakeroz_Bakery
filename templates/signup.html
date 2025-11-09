@@ -1,16 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bakeroz</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+        <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body{
-            background-image: url("bg.png");
-        }
+      body {
+        display: flex;
+        justify-content: center;
+        background-image: url("static/bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+        background-position: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        color: white;
+        font-family: "Roboto";
+      }
+      .sign-up {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border: #ffbb38 3px solid;
+        padding: 30px;
+        border-radius: 10px;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 0 15px rgba(255, 187, 56, 0.4);
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      input {
+        height: 40px;
+        width: auto;
+        background-color: transparent;
+        border: #ffbb38 3px solid;
+        border-radius: 5px;
+        color: white;
+        font-family: "Roboto";
+        font-weight: bold;
+        font-size: 20px;
+      }
+      h3 {
+        font-family: "Roboto";
+        font-size: 45px;
+        font-weight: bold;
+        margin-top: -15px;
+        margin-bottom: 0px;
+      }
+      button {
+        color: white;
+        background-color: #ffbb38;
+        height: 30px;
+        font-size: large;
+        font-weight: bold;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+      }
+      button:hover {
+        background-color: #e3ba64;
+      }
+      button:active {
+        background-color: #ffe3ac;
+      }
+      input::placeholder {
+        color: white;
+      }
+      img {
+        height: 200px;
+        width: auto;
+        display: flex;
+        margin-top: -30px;
+        border-radius: 50%;
+      }
+      p {
+        display: flex;
+        letter-spacing: 1px;
+        font-size: 20px;
+        font-family: "Roboto";
+      }
+      a {
+        text-decoration: none;
+        color: #ffbb38;
+        font-weight: bold;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      h1 {
+        color: #ffbb38;
+        font-family: "Pacifico", cursive;
+        font-size: 50px;
+        letter-spacing: 1px;
+        margin-top: -20px;
+      }
+      hr {
+        color: white;
+        background-color: white;
+        height: 3px;
+        width: 100%;
+        margin-top: 0px;
+        border: 10px;
+        border-radius: 5%;
+      }
     </style>
-</head>
-<body>
-       
-</body>
+  </head>
+  <body>
+    <form action="">
+    <div class="sign-up">
+      <img src="{{url_for('static' ,filename ='BAKEROZ.png')}}" alt="logo" />
+      <h1>BAKEROZ</h1>
+      <h3 style="margin-top: -51px;">Join us!</h3>
+      <hr>
+      <input type="text" placeholder="Enter your name" name="Name" required = "required" />
+      <input type="text" placeholder="Enter your Email" name="Email" required = "required" />
+      <input type="password" placeholder="Create Password" name="Create-password" required = "required"/>
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        name="Confirm-password"
+        required = "required"/>
+      <button>Sign up</button>
+      
+      <p>Already have an account? <a href="{{url_for('login')}}">Login</a></p>
+    </div></form>
+  </body>
 </html>
