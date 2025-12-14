@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
-        <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
@@ -119,23 +119,43 @@
     </style>
   </head>
   <body>
-    <form action="">
-    <div class="sign-up">
-      <img src="{{url_for('static' ,filename ='BAKEROZ.png')}}" alt="logo" />
-      <h1>BAKEROZ</h1>
-      <h3 style="margin-top: -51px;">Join us!</h3>
-      <hr>
-      <input type="text" placeholder="Enter your name" name="Name" required = "required" />
-      <input type="text" placeholder="Enter your Email" name="Email" required = "required" />
-      <input type="password" placeholder="Create Password" name="Create-password" required = "required"/>
-      <input
-        type="password"
-        placeholder="Confirm Password"
-        name="Confirm-password"
-        required = "required"/>
-      <button>Sign up</button>
-      
-      <p>Already have an account? <a href="{{url_for('login')}}">Login</a></p>
-    </div></form>
+    <form action="{{url_for('signup')}}" method="post">
+      <div class="sign-up">
+        <img src="{{url_for('static' ,filename ='BAKEROZ.png')}}" alt="logo" />
+        <h1>BAKEROZ</h1>
+        <h3 style="margin-top: -51px">Join us!</h3>
+        <hr />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          name="Name"
+          required="required"
+        />
+        <input
+          type="text"
+          placeholder="Enter your Email"
+          name="Email"
+          required="required"
+        />
+        <input
+          type="password"
+          placeholder="Create Password"
+          name="Create-password"
+          required="required"
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          name="Confirm-password"
+          required="required"
+        />
+        <button>Sign up</button>
+
+        <p>Already have an account? <a href="{{url_for('login')}}">Login</a></p>
+        {% if error %}
+        <p>{{error}}</p>
+      {% endif %}</div>
+
+    </form>
   </body>
 </html>
