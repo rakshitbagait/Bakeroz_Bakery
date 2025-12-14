@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakeroz</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename = 'style.css')}}"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="topnav">
+      <form action="search" ,method="post">
+        <h1>Bakeroz</h1>
+
+        <input name="search-box" type="text" placeholder="" id="searchBox" />
+        <button>
+          <img src="{{url_for('static',filename='search.svg')}}" alt="search" />
+        </button>
+
+        <ul>
+          <li>
+            <a href="{{url_for('homepage')}}"
+              ><img src="{{url_for('static',filename='home.svg')}}" alt="home"
+            /></a>
+          </li>
+          <li>
+            <a href="{{url_for('account')}}">
+                <img src="{{url_for('static',filename='account.svg')}}" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="{{url_for(cart)}}"
+              ><img src="{{url_for('static',filename='cart.svg')}}" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="{{url_for('logout')}}"
+              ><img src="{{url_for('static',filename='logout.svg')}}" alt=""
+            /></a>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <script>
+      const placeholders = [
+        "Search for cakes…",
+        "Search for muffins…",
+        "Search for cookies…",
+        "Search for pastries…",
+        "Search for doughnuts…",
+      ];
+
+      let index = 0;
+      const searchBox = document.getElementById("searchBox");
+
+      function changePlaceholder() {
+        searchBox.setAttribute("placeholder", placeholders[index]);
+        index = (index + 1) % placeholders.length;
+      }
+
+      setInterval(changePlaceholder, 2000); // change every 2 seconds
+      changePlaceholder();
+    </script>
+    <footer></footer>
+  </body>
+</html>
