@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakeroz</title>
+    <style>
+        .confirm
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            background-color:  #4A2E1F;
+            margin-top: -300px;
+            top: 70%;
+            left: 40%;
+            height: 150px;
+            width: auto;
+            color: white;
+            padding: 5px 15px 5px 15px;
+            border-radius: 10px;
+            border: black solid;
+            box-shadow:5px 2px 2px 5px rgba(35, 35, 35, 0.564);
+        }
+        .cancel-confirm
+        {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            flex-direction: row;
+            gap: 10px;
+        }
+        #cancel
+        {
+        position: relative;
+        margin-left: -10px;
+        margin-top: 0px;
+        border-radius: 3px;
+        border: none;
+        height: 30px;
+        width: auto;
+        font-family:Poppins;
+        font-size: 15px;
+        background-color: transparent;
+        color:white;
+        border: white solid;
+        padding: 4px 28px 4px 28px;
+        }
+        #confirm{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 0px;
+        border-radius: 3px;
+        height: 30px;
+        width: auto;
+        font-family:Poppins;
+        font-size: 15px;
+        background-color: transparent;
+        color:red;
+        border: red solid;
+        padding: 4px 28px 4px 28px;
+        }
+        #cancel ,#confirm:hover{    
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    {%include 'header.html'%}   
+    <div class="user-profile">
+        <label for="Name">Name
+               <span>{{Name}}</span><span><a href="">Edit</a></span>  
+        </label>
+        <br>
+        <hr>
+        <label for="Email">
+            Email   <span>{{Email}}</span> 
+        </label>
+        <br><hr>
+        <label for="Password">
+            Password
+             <span><a href="">Change password</a></span>  
+        </label><br><hr>
+                <label for="Address">
+                    Address <span>{{Address}}</span>
+          <span><a href="">Edit</a></span>  
+        </label><br><hr>
+        <label for="Order-Tracking">Track Your Order <span>
+            <a href="">
+                See your order
+            </a></span></label>
+            <br><hr>
+                <form action="{{url_for('account')}}" method ="post">
+        <button class="Delete">Delete Account</button>
+    </form>
+    </div>
+    {%if delete %}
+    <form method="post">
+    <div class="confirm">
+        <h3>Are you sure you want to <br>delete your account?</h3>
+        <div class="cancel-confirm">
+            <button type ="submit" name="cancel" id="cancel">Cancel</button>
+            <button id="confirm" type="submit" name="confirm">Confirm</button>
+        </div>
+
+    </div>
+    </form>
+    {% endif %}
+</body>
+</html>
