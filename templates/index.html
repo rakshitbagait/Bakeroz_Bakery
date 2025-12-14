@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakeroz</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+   <div id="heading">
+    
+    <h1>Bakeroz</h1>
+</div>
+
+    <nav id = "navbar">
+      <li>
+        <ul>
+          <a href="{{url_for('login')}}">Home</a>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <a href="">About us</a>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <a href="">Contact us</a>
+        </ul>
+      </li>
+            <li>
+        <ul>
+          <a href="">Review</a>
+        </ul>
+      </li>
+      <form action="{{url_for('login')}}" method="post">
+      <button id ="order" >Order Now</button></form>
+    </nav>
+    <div class="bg-image">
+        <img src="{{url_for('static',filename='9.png')}}" alt="">
+        <h2>
+          Tasty & <br>
+          Delicious
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          <br>Dolore, laudantium. 
+          <br>Sequi magnam culpa a aspernatur voluptates aut delectus non! 
+          <br>Eos, ab quam exercitationem molestias 
+          blanditiis cupiditate sequi asperiores autem atque?
+        </p>
+        <form action="{{url_for('login')}}" method = "post">
+        <button >Order Now</button></form>
+        
+    </div>
+  </body>
+</html>
