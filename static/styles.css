@@ -1,0 +1,141 @@
+body{
+    background-color: #4A2E1F;
+}
+
+#navbar
+{
+    width: 100vh;
+    position: sticky;
+    overflow: hidden;
+    font-size: 20px;
+    top: 10px;
+    display: flex;
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+    font-family: poppins;
+}
+#navbar li{
+    list-style: none;
+    justify-content: end;
+    padding: 10px 5px;
+}
+#navbar li ul a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+#navbar a:hover{
+    text-decoration:underline #7d4323 5px ;
+
+}
+#navbar a:active{
+    text-decoration: underline  #7d4323 5px;
+}
+/* Sticky Left Logo Section */
+#heading {
+    position: fixed;           /* makes it sticky like you wanted */
+    top:25px;                 /* space below navbar */
+    left: 30px;                /* push it slightly from left */
+    z-index: 10;               /* stays above background, below navbar */
+    display: flex;
+    flex-direction: column;    /* image on top, text below */
+    align-items: flex-start; 
+    margin: 2px 2px 2px 2px;  /* keep everything left-aligned */
+}
+
+/* Logo Image */
+#heading img {
+    height: 100px;             /* Good size */
+    width: auto;
+    display: block;
+}
+
+/* Logo Text */
+#heading h1 {
+    font-family: "Pacifico", cursive;
+    color: #ffbb38;
+    font-size: 30px;
+    margin: 10px 0 0 0;        /* space between image and text */
+}
+
+
+#order{
+    position: relative;
+    margin-left: 25px;
+    margin-top: 28px;
+    border-radius: 3px;
+    border: none;
+    height: 35px;
+    width: auto;
+    font-family:Poppins;
+    font-size: 15px;
+   background-color: #ffbb38;
+    color:black;
+    padding: 4px 28px 4px 28px;
+}
+#order:hover{
+    cursor: pointer;
+    background-color: #f6d496;
+}
+hr{
+    background-color: #5f3620;
+    width:100%;
+    border-radius: 5px;
+    height: 5px;
+    border: none;
+}
+
+.bg-image img{
+    width: 100%;
+    height: 90vh;
+    background-color: white;
+    object-fit: cover;     /* Essential for beautiful crop like mine */
+    object-position: center;
+    border-radius: 20px;
+    /* background-image: url("8.png"); */
+}
+.bg-image h2
+{
+position: absolute;
+    top: 30%;           
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: white;
+    text-align: center;
+}
+.bg-image p
+{
+position: absolute;
+    top: 60%;           
+    margin-left: 2%;
+    /* transform: translate(-50%, -50%); */
+    color: white;
+    text-align: justify;
+
+}
+.bg-image button {
+    position: absolute;
+    bottom: 15%;          /* adjust this to place button vertically */
+    left: 10%;            /* adjust this to move button horizontally */
+    transform: translate(-50%, 0);
+    /* Button styling copied from #order */
+    border-radius: 3px;
+    border: none;
+    height: 35px;
+    width: auto;
+    font-family: Poppins;
+    font-size: 15px;
+    background-color: #4A2E1F;
+    color: white;
+    padding: 4px 28px;
+    cursor: pointer;
+}
+.bg-image button:hover{
+    background-color: #7d4323;
+}
+.bg-image button:active{
+    background-color: #c17c57;
+}

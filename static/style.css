@@ -1,0 +1,172 @@
+body {
+    background-color: #fcdfa9;
+    margin: 0;
+    font-family: Poppins, sans-serif;
+}
+
+/* NAVBAR */
+.topnav {
+    width: 100%;
+    background-color: #4A2E1F;
+    display: flex;
+    align-items: center;          /* vertically center */
+    justify-content: space-between;
+    padding: 8px 18px;
+    box-sizing: border-box;
+}
+
+/* FORM must use flex layout too */
+.topnav form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 18px;                    /* spacing between elements */
+    margin: 0;
+}
+
+/* LEFT LOGO */
+.topnav h1 {
+    margin: 0;
+    font-size: 28px;
+    color:#ffb732;
+}
+
+/* SEARCH BAR CENTER */
+#searchBox {
+    min-width: 200px;
+    flex: 1;                      /* THIS centers it */
+    height: 38px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 2px solid #ffb732;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* SEARCH BUTTON */
+.topnav button {
+    background-color: #ffb732;
+    border: none;
+    border-radius: 8px;
+    margin-left: -50px;
+    cursor: pointer;
+    height: 38px;
+    width: 50px;
+}
+
+.topnav button img {
+    height: 20px;
+    width: 20px;
+}
+
+/* RIGHT SIDE ICONS */
+.topnav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+}
+
+.topnav ul li a img {
+    height: 26px;
+    width: 26px;
+}
+
+/* Make navbar responsive */
+@media (max-width: 700px) {
+    .topnav form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #searchBox {
+        flex-basis:50%
+    }
+
+    .topnav ul {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+    }
+    .topnav button {
+    background-color: #ffb732;
+    border: none;
+    border-radius: 8px;
+    margin-left: -50px;
+    cursor: pointer;
+    height: 38px;
+    width: 50px;
+}
+}
+
+.user-profile
+{   
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: #4A2E1F solid;
+    border-radius: 20px;
+    height: auto;
+    background-color: #fbefd8;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding :0;  
+    font-size: 10px;
+
+}
+.user-profile label
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+.user-profile hr
+{
+    height: 2px;
+    width: 90%;
+    color: #4A2E1F;
+    background-color: #4A2E1F;
+    border-radius: 5px;
+    opacity: 0.5;
+    margin-top: 0;
+}
+
+.user-profile label
+{
+    font-size: 20px;
+    padding: 14px 20px;
+    margin: 10px 10px 10px 10px;
+}
+.user-profile label a
+{
+    color: blue;
+    text-decoration: none;
+}.user-profile label a:hover
+{
+    cursor: pointer;
+    color: rgb(72, 163, 255);
+    text-decoration: underline;
+}
+.Delete
+{
+    margin: 30px;
+    height: 50px;
+    width: auto;
+    font-size: 20px ;
+    color: red;
+    background-color: transparent;
+    border: red solid;
+    border-radius: 5px ;
+    padding: 5px 5px 5px 5px;
+}
+.Delete:hover{
+    cursor: pointer;
+}
+span{
+    float:right;
+}
+
