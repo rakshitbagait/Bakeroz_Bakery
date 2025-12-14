@@ -72,12 +72,16 @@
 </head>
 <body>
     <div class="verify">
-    <form action="">
-        <h1>Enter the OTP</h1>
+    <form action="{{url_for('verify')}}" method="post">
+        <h1>Verify</h1>
         <hr>
-        <input type="text" required ="required" placeholder="Enter the 6 digit OTP">
-        <button>Enter OTP</button>
+        <input name = "code-for-verification" type="text" required ="required" placeholder="Enter the 6 digit code">
+        <button>Submit</button>
+        <p style="text-align: left;margin-left:15px;">A six digit verification code has been <br>
+        sent to your email. Enter the code <br>
+        to verify yourself.</p>
     </form>
+
     </div>
 </body>
 </html>
